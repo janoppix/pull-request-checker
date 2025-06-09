@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "GitHub PR Checker",
+    "version": "1.0",
+    "description": "Te recuerda que Pull Request es en base a staging y no main.",
+    "permissions": ["scripting"],
+    "content_scripts": [
+      {
+        "matches": ["*://github.com/*/*"],
+        "js": ["content.js"],
+        "run_at": "document_idle"
+      }
+    ],
+    "icons": {
+      "48": "icon.png"
+    }
+  }
+  
